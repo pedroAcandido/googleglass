@@ -1,0 +1,53 @@
+form {
+    width: 500px;
+    margin: auto;
+}
+
+input {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+    font-size: 9pt;
+}
+
+input:hover {
+    background-color: #dddddd;
+}
+
+input, textarea {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 13pt;
+    background-color: rgba(250, 250, 250,.8);
+}
+
+legend {
+    color: #5F9EA0;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13pt;
+}
+
+fieldset {
+    border-color: #cececece;
+    margin: 20px;
+}
+
+fieldset#sexo {
+    width: 150px;
+}
+
+fieldset#Usuario {
+    background: url(imag/icone-contato.png) no-repeat 95% 95%
+}
+
+fieldset#Endereço {
+    background: url(imag/icone-endereco.png) no-repeat 95% 95%
+}
+
+fieldset#Mensagem {
+    background: url(imag/icone-mensagem.png) no-repeat 95% 95%
+}
+
+fieldset#compra {
+    background: url(imag/icone-pagamento.png) no-repeat 95% 95%
+}
