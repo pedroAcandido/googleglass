@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imag/favicon.png">
+    <title>Projts</title>
+    <link rel="stylesheet" href="index.css"> 
+    <link rel="stylesheet" href="fale-con.css">   
+   
+ 
+</head>
+<script>
+    function mudafoto (foto) {
+        document.getElementById("icone").src=foto;
+    }
+
+    function calc_total() {
+        var qtd = parseInt(document.getElementById('cquan').value);
+        tot = qtd * 1500;
+        document.getElementById('cprr').value = tot;
+    }
+</script>
+<body>
+
+    <div id="interface">
+
+        <header id="cabecalho">
+          <hgroup>
+              <h1>Google Glass</h1>
+               <h2>A revolução do Google está chegando</h2>
+                 </hgroup>
+
+                  <img id="icone" src="imag/contato.png" alt="oculos preto">
+     
+                <nav id="menu">
+                    <h1>Menu Principal</h1>
+                     
+                     <ul>
+                          <li onmouseover="mudafoto('imag/Home.png')" onmouseout="mudafoto('imag/contato.png')"><a href="index.html">Home</a></li>
+                         <li onmouseover="mudafoto('imag/especificacoes.png')" onmouseout="mudafoto('imag/contato.png')"><a href="specs.html">Especificações</a></li>
+                         <li onmouseover="mudafoto('imag/fotos.png')" onmouseout="mudafoto('imag/contato.png')"><a href="fotos.html">Fotos</a></li>
+                         <li onmouseover="mudafoto('imag/multimidia.png')" onmouseout="mudafoto('imag/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+                         <li onmouseover="mudafoto('imag/contato.png')" onmouseout="mudafoto('imag/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                     </ul>
+                                   
+                </nav>
+      </header>
+
+      <section id="corpo-full">
+        <article id="noticia-principal">
+            <header id="cabeçalho-artigo">
+     <hgroup>
+         <h3>Fale Conosco > Contato</h3>
+         <h1>Formulário de Contato</h1>
+         <h3 class="direita"> Atualizado em 01/Maio/2013</h3>
+     </hgroup>
+    </header>
+
+    
+    
+
+<form action="email" method="post" id="fcontato" oninput="calc_total();">
+    <fieldset id="Usuario"> 
+        <legend>Identificação do Usuário</legend>
+            <p>Nome: <input type="text" name="tnome" id="cnome" size="20" maxlength="30" placeholder="Nome Completo"> </p>
+            <p>Senha: <input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="Sua Senha"> </p>
+            <p>E-mail: <input type="email" name="tmail" id="cmail" size="20" maxlength="40" placeholder="Seu E-mail"> </p>
+          
+            <fieldset id="sexo">
+                <legend>Sexo</legend>
+                <input type="radio" name="tsexo" id="cmas"> <label for="cmas">Masculino</label><br>
+                <input type="radio" name="tsexo" id="cfem"> <label for="cfem">Femenino</label>
+        
+                 </fieldset>
+                 <p>Data de Nascimento: <input type="date" name="tdat" id="cdat"> </p>  
+    </fieldset>
+    <fieldset id="Endereço">
+        <legend>Endereço do Usuário</legend>
+            <p>Logradouro: <input type="text" name="trua" id="crua" size="13" maxlength="80" placeholder="Rua, Trav, Av ...."> </p>
+            <p>Número: <input type="number" name="tnub" id="cnub" min="0" max="99999" placeholder="Numero da casa"> </p>
+            <p><label for="test">Estado:</label> 
+            <select name="test" id="cest">
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MS">Mato Gosso do Sul</option>
+                <option value="SP">São Paulo</option>
+                <option value="PR">Parana</option>
+
+            </select></p>
+
+            <p>Cidade: <input type="text" name="tcid" id="ccid" maxlength="40" size="20" placeholder="Sua Cidade" list="Cidade"></p>
+            <datalist id="Cidade">
+                <option value="Rio de Janeiro"></option>
+                <option value="Campo Grande"></option>
+                <option value="Corumba"></option>
+                <option value="Nova Iguaçu"></option>
+            </datalist>
+    </fieldset>
+    
+    <fieldset id="Mensagem">
+        <legend>Mensagem do Usuário</legend>
+            <p>Grau de Urgência: Min <input type="range" name="turg" id="curg" min="0" max="10"> Max</p>
+            <p>Mensagem: <textarea name="tmens" id="cmens" cols="30" rows="10" placeholder="Deixa aqui a sua menssagem"></textarea></p>
+    </fieldset>
+    
+    <fieldset id="compra">
+        <legend>Quero um Google Glass</legend>
+            <p> <input type="checkbox" name="tgost" id="cgost"> Gostaria de adquirir um Google Glass quando disponível</p>
+            <p>Cor: <input type="color" name="tcor" id="ccor"> </p>
+            <p>Quantidade: <input type="number" name="tquan" id="cquan" min="0" max="6" value="0"> </p>
+            <p>Preço Total: R$ <input type="text" name="tprr" id="cprr" placeholder="Total a Pagar" readonly></p>
+    </fieldset>
+    
+        <input type="image" name="tenvia" id="cenvia" src="imag/enviar.png">
+    
+</form>
+
+<footer id="fundo">
+    <p style="text-align: center;"> Copyright 2013 
+     <a href="https://www.facebook.com/profile.php?id=100072764170257" target="_blank">Facebook</a> | <a href="https://twitter.com/Pedrshin" target="_blank">Twitter</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
+
+frameborder
+ <scrolling> s
+    <marginwidth> 
+        <marginheight>
+
+        </marginheight>
